@@ -1,0 +1,19 @@
+.questions
+	.questions-head.inner-head
+		h1.questions-head__title.inner-head__title Вопросы и ответы
+		a.questions-head__link.btn-blue(id="btn-head-popup-quest" href="#popup-quest") Задать вопрос
+	.questions-body
+		.questions-body-content.content
+			.questions-accordion
+				ul.questions-accordion-list
+					include _questions-accordion-item
+					include _questions-accordion-item
+					include _questions-accordion-item
+					include _questions-accordion-item
+					include _questions-accordion-item
+					include _questions-accordion-item
+					include _questions-accordion-item
+					include _questions-accordion-item
+				.questions-body-btns
+					a.questions-body-btns__link.btn-blue(id="btn-body-popup-quest" href="#popup-thanks") Задать вопрос
+			include _pagination

@@ -1,0 +1,118 @@
+.i-gallery-item {
+	height: rem(300px);
+	margin-bottom: rem(40px);
+	@include box-shadow(2px 0 43px rgba(0, 0, 2, .13));
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&:nth-child(2n+1) {
+		.i-gallery-item-content,
+		.i-gallery-item-img {
+			float: left;
+		}		
+	}
+
+	&:nth-child(2n) {
+		.i-gallery-item-content,
+		.i-gallery-item-img {
+			float: right;
+		}
+	}
+
+	@include w600 {
+		height: auto;
+	}
+}
+
+.i-gallery-item-link {
+	display: block;
+	@extend %clearfix;
+
+	&:hover {
+		.i-gallery-item-content__link {
+			border-color: $grey2;
+		}
+	}
+}
+
+.i-gallery-item-content,
+.i-gallery-item-img {
+	width: 50%;
+	height: rem(300px);
+
+	@include w600 {
+		width: 100%;
+		height: rem(260px);
+	}
+}
+
+.i-gallery-item-content {
+	position: relative;
+	padding: rem(43px) rem(50px);
+
+	@include w800 {
+		padding: rem(30px) rem(35px);
+	}
+}
+
+.i-gallery-item-content__title {
+	font-family: 'Museo Sans Cyrl 100';
+	margin-bottom: rem(12px);
+	font-size: rem(28px);
+	color: $blue;
+}
+
+.i-gallery-item-content__desc {
+	height: rem(124px);
+	line-height: 1.6;
+	font-size: rem(15px);
+	color: $black;
+
+	@include w800 {
+		height: rem(144px);
+	}
+
+	@include w600 {
+		height: rem(104px);
+	}
+}
+
+.i-gallery-item-content__link {
+	display: inline-block;
+	position: absolute;
+	bottom: rem(45px);
+	font-family: 'Museo Sans Cyrl 100';
+	font-size: rem(16px);
+	color: $grey2;
+	border-bottom: 1px solid transparent;
+	@include transition(.3s);
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: -30px;
+		@include transform(translateY(-50%));
+		width: 19px;
+		height: 9px;
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAJCAMAAADnw+cDAAAAMFBMVEWOj5GOj5GOj5GOj5GOj5GOj5GOj5GOj5GOj5GOj5GOj5GOj5GOj5GOj5GOj5GOj5FLOGR+AAAAD3RSTlMAJCovMDdLU1RdqMTi5+mJvaY9AAAAL0lEQVR4AWNABVysDBiAjY8ZU5CDlwlTkJOHkYEfA3BjVYcG2HmZMO1lAVGY7gMAmbUBwAdUvokAAAAASUVORK5CYII=)no-repeat;
+	}
+
+	@include w800 {
+		bottom: rem(40px);
+	}
+}
+
+.i-gallery-item-img {
+	position: relative;
+	overflow: hidden;
+}
+
+.i-gallery-item-img__pic {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+}

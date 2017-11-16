@@ -1,0 +1,23 @@
+header.header.header--index.show
+	.container
+		.header-logo
+			a.header-logo-link(href="index.html")
+				img.header-logo-link__img(src="./img/logo.png" alt="")
+		.header-nav
+			ul.header-nav-list
+				li.header-nav-item.active
+					a.header-nav-item__link(href="projects.html") Проекты
+				li.header-nav-item
+					a.header-nav-item__link(href="inside.html") О компании
+				li.header-nav-item
+					a.header-nav-item__link(href="workers.html") Сотрудники
+				li.header-nav-item
+					a.header-nav-item__link(href="questions.html") Вопросы и ответы
+				li.header-nav-item
+					a.header-nav-item__link(href="contacts.html") Контакты
+		include _burger
+		.header-contacts
+			ul.header-contacts-list
+				li.header-contacts-item
+					a.header-contacts-item__link(href="tel:+74957885575") +7 (495) <span>788-55-75</span>
+					.header-contacts-item__text +7 (495) <span>788-55-75</span>

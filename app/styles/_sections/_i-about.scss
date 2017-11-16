@@ -1,0 +1,85 @@
+.i-about-body-top {
+	height: rem(640px);
+	@include box-shadow(2px 0 43px rgba(0, 0, 2, .13));
+	@extend %clearfix;
+
+	@include w1224 {
+		height: 46vw;
+	}
+
+	@include w600 {
+		height: auto;
+	}
+}
+
+.i-about-body-top-content {
+	float: left;
+	width: 50%;
+	height: rem(640px);
+	padding: rem(45px) rem(50px);
+
+	@include w1224 {
+		height: 46vw;
+	}
+
+	@include w800 {
+		padding: rem(30px) rem(35px);
+	}
+
+	@include w600 {
+		float: none;
+		width: 100%;
+		height: rem(260px);
+	}
+}
+
+.i-about-body-top-img {
+	position: relative;
+	float: left;
+	width: 50%;
+	height: rem(640px);
+	overflow: hidden;
+
+	@include w1224 {
+		height: 46vw;
+	}
+
+	@include w600 {
+		float: none;
+		width: 100%;
+		height: rem(260px);
+	}
+}
+
+.i-about-body-top-img__pic {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+	height: 100%;
+
+	@include w600 {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.i-about-body-bottom {
+	position: relative;
+	height: rem(450px);
+	margin-top: rem(40px);
+	overflow: hidden;
+	@include box-shadow(2px 0 43px rgba(0, 0, 2, .13));
+
+	@include w1224 {
+		height: 36vw;
+	}
+}
+
+.i-about-body-bottom__img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+	max-width: 100%;
+}

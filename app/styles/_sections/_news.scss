@@ -1,0 +1,114 @@
+
+
+.news-head__title {
+	text-align: left;
+}
+
+.news-item {
+	margin-bottom: 25px;
+	@include box-shadow(2px 0 43px rgba(0, 0, 2, .13));
+	@extend %clearfix;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.news-item-img,
+.news-item-content {
+	float: left;
+	width: 50%;
+	height: 320px;
+}
+
+.news-item-img {
+	position: relative;
+	overflow: hidden;
+}
+
+.news-item-img__pic {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+    max-width: 100%;
+}
+
+.news-item-content {
+	position: relative;
+	padding: 43px 50px;
+	text-align: left;
+	background-color: #fff;
+}
+
+.news-item-content__title {
+	margin-bottom: 10px;
+	font-size: 28px;
+	color: $blue;
+}
+
+.news-item-content__date {
+	margin-bottom: 20px;
+	font-family: 'Museo Sans Cyrl 100';
+	font-size: 15px;
+	color: $grey2;
+}
+
+.news-item-content__desc {
+	line-height: 1.6;
+	font-size: 15px;
+	color: $black;
+}
+
+.news-item-content__link {
+	display: inline-block;
+	position: absolute;
+	bottom: 45px;
+	padding-right: 30px;
+	font-family: 'Museo Sans Cyrl 100';
+	font-size: 16px;
+	color: $grey2;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: 0;
+		@include transform(translateY(-50%));
+		width: 19px;
+		height: 9px;
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAJCAMAAADnw+cDAAAAMFBMVEWOj5GOj5GOj5GOj5GOj5GOj5GOj5GOj5GOj5GOj5GOj5GOj5GOj5GOj5GOj5GOj5FLOGR+AAAAD3RSTlMAJCovMDdLU1RdqMTi5+mJvaY9AAAAL0lEQVR4AWNABVysDBiAjY8ZU5CDlwlTkJOHkYEfA3BjVYcG2HmZMO1lAVGY7gMAmbUBwAdUvokAAAAASUVORK5CYII=)no-repeat;
+	}
+}
+
+.new-head__title {
+	text-align: left;
+}
+
+.new-body__date {
+	margin-bottom: 20px;
+	font-family: 'Museo Sans Cyrl 100';
+	font-size: 15px;
+	color: $grey2;
+}
+
+.new-body-img {
+	position: relative;
+	width: 600px;
+	height: 380px;
+	margin: 0 0 24px 0;
+	overflow: hidden;
+
+	@include w680 {
+		width: 100%;
+		height: 56vw;
+	}
+}
+
+.new-body-img__pic {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+	max-width: 100%;
+}

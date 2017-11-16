@@ -1,0 +1,52 @@
+form {
+
+	&.warning {
+		.contacts-callback-form-warning {
+			display: block;
+		}
+	}
+}
+
+.label {
+	margin-bottom: rem(20px);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	@include w700 {
+		margin-bottom: rem(14px);
+	} 
+}
+
+.input {
+	width: 100%;
+	padding: rem(8px) 0;
+	border: none;
+	border-bottom: 1px solid #dbdee0;
+
+	&.warning {
+		border-color: red;
+	}
+}
+
+.textarea {
+	width: 100%;
+	min-height: rem(70px);
+	padding: rem(8px) 0;
+	border: none;
+	border-bottom: 1px solid #dbdee0;
+	resize: none;
+
+	&.warning {
+		border-color: red;
+	}
+}
+
+.contacts-callback-form-warning {
+	display: none;
+	margin-top: 18px;
+	left: 0;
+	font-size: 13px;
+	color: red;
+}

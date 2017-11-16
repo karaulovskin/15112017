@@ -1,0 +1,223 @@
+.contacts-body-address {
+	margin-bottom: rem(24px);
+}
+
+.contacts-body-address-list {
+	font-size: 0;
+}
+
+.contacts-body-address-item {
+	@include inline-block(top);
+	margin-left: rem(64px);
+	font-size: rem(15px);
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.contacts-body-address-item--point {
+    width: rem(350px);
+
+    @include w700 {
+    	width: 100%;
+    	margin-bottom: rem(20px);
+    }
+}
+
+.contacts-body-address-item--phone {
+	width: rem(132px);
+
+	@include w700 {
+		width: 28%;
+    	margin-left: 0;
+    }
+}
+
+.contacts-body-address-item--mail {
+	
+	@include w700 {
+    	width: 72%;
+    	margin-left: 0;
+    	padding-left: rem(64px);
+    }
+}
+
+.contacts-body-address-item--phone,
+.contacts-body-address-item--mail {
+
+	.contacts-body-address-item-desc__text {
+		@include w1080 {
+			display: none;
+		}
+	}
+}
+
+.contacts-body-address-item__title {
+	margin-bottom: 4px;
+	font-size: rem(15px);
+	color: #9fa1a4;
+}
+
+.contacts-body-address-item-desc__text {
+	line-height: 1.6;
+	font-size: rem(15px);
+	color: $black;
+}
+
+.contacts-body-address-item-desc__link {
+	display: none;
+	line-height: 1.6;
+	font-size: rem(15px);
+	color: $black;
+
+	@include w1080 {
+		display: inline-block;
+	}
+}
+
+.contacts-map {
+	position: relative;
+	height: rem(600px);
+	background-color: $section-bg;
+}
+
+.map {
+	width: 100%;
+	height: rem(600px);
+}
+
+.contacts-callback {
+	position: absolute;
+	top: 50%;
+	right: rem(62px);
+	@include transform(translateY(-50%));
+	width: rem(530px);
+	padding: rem(55px);
+	background-color: #fff;
+
+	@include w1080 {
+		width: rem(460px);
+	}
+
+	@include w890 {
+		width: rem(400px);
+	}
+
+	@include w700 {
+		width: rem(340px);
+		padding: rem(40px);
+		top: auto;
+		right: 10px;
+		bottom: 10px;
+		@include transform(translateY(0%));
+	}
+}
+
+.contacts-callback-head {
+	margin-bottom: rem(18px);
+}
+
+.contacts-callback__title {
+	font-family: 'Museo Sans Cyrl 100';
+	font-size: rem(30px);
+	color: $black-title;
+}
+
+.contacts-callback-form-btns {
+	@extend %clearfix;
+}
+
+.contacts-callback-form-btn {
+	@include inline-block(middle);
+
+	@include w890 {
+		display: block;
+		width: 100%;
+	}
+}
+
+.contacts-callback-form-checkbox {
+	float: right;
+	@include inline-block(middle);
+    width: rem(218px);
+	margin-left: rem(50px);
+
+	.checkbox {
+		padding-left: 5px;
+	}
+
+	.checkbox-label__fake {
+		@include transform(translateY(10px));
+		margin-right: 10px;
+	}
+
+	.checkbox-label__text {
+		font-size: rem(14px);
+	}
+
+	.checkbox__link {
+		font-size: rem(14px);
+	    margin-left: rem(34px);
+	}
+
+	@include w1080 {
+		float: none;
+		width: auto;
+		margin-left: 0;
+
+		.checkbox {
+			margin-bottom: rem(20px);
+			padding-left: 0;
+		}
+
+		.checkbox-label__fake {
+			@include transform(translateY(0));
+		}
+
+		.checkbox__link {
+		    margin-left: rem(4px);
+		}
+
+	}
+
+	@include w890 {
+		float: none;
+		width: auto;
+		margin-left: 0;
+
+		.checkbox {
+			margin-bottom: rem(20px);
+			padding-left: 0;
+		}
+
+		.checkbox-label__fake {
+			@include transform(translateY(10px));
+		}
+
+		.checkbox__link {
+		    margin-left: rem(40px);
+		}
+
+	}
+
+	@include w700 {
+
+		.checkbox-label__fake {
+			@include transform(translateY(12px));
+		}
+
+		.checkbox-label__text {
+			@include transform(translateY(4px));
+		}
+			
+		.checkbox__link {
+		    margin-left: rem(46px);
+		}
+
+	}
+}
+
+.ymaps-2-1-55-image {
+	cursor: default;
+}

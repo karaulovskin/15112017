@@ -1,0 +1,153 @@
+.i-owl {
+	height: 100vh;
+
+	.header--inner {
+		height: 0;
+		padding-top: 0;
+		opacity: 0;
+		overflow: hidden;
+
+		&.show {
+			height: 80px;
+			padding-top: 25px;
+			opacity: 1;
+		}
+	}
+
+	.header--index {
+		height: 0;
+		padding-top: 0;
+		opacity: 0;
+		overflow: hidden;
+
+		&.show {
+			height: 112px;
+			padding-top: rem(73px);
+			opacity: 1;
+		}
+
+		@include w1224 {
+			&.show {
+				padding-top: rem(50px);
+			}
+		}
+	}
+
+	@include w1080 {
+		height: rem(960px); 
+	}
+
+	@include w1024 {
+		height: rem(800px);
+	}
+}
+
+.i-owl-list {
+
+	.owl-controls {
+		bottom: rem(95px);
+	}
+
+	.owl-dot {
+		background-color: #fff;
+
+		&.active,
+		&:hover {
+			background-color: $blue;
+		}
+	}
+}
+
+.i-owl-item {
+	position: relative;
+	// height: rem(960px);
+	height: 100vh;
+
+	&:after {
+		content: "";
+		@include absolute-center;
+		background-color: rgba(0, 0, 0, .5);
+	}
+
+	@include w1080 {
+		height: rem(960px); 
+	}
+
+	@include w1024 {
+		height: rem(800px);
+	}
+}
+
+.i-owl-item__img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+}
+
+.i-owl-item-content {
+	position: absolute;
+	top: 53%;
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+	max-width: 1200px;
+	width: 90%;
+	text-align: center;
+	z-index: 1;
+}
+
+.i-owl-item-content__title {
+	font-family: 'Museo Sans Cyrl 700';
+	text-transform: uppercase;
+    letter-spacing: .06em;
+	font-size: rem(56px);
+	color: #fff;
+
+	@include w1280 {
+		font-size: rem(54px);
+	}
+
+	@include w1080 {
+		font-size: rem(48px);
+	}
+
+	@include w768 {
+		font-size: rem(38px);
+	}
+
+	@include w600 {
+		font-size: rem(34px);
+	}
+}
+
+.i-owl-item-content__desc {
+	position: relative;
+	margin: rem(78px) auto 0;
+	font-size: rem(24px);
+	color: #fff;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: -54px;
+		left: 50%;
+		@include transform(translateX(-50%));
+		width: rem(140px);
+		height: 2px;
+		background-color: #fff;
+	}
+
+	@include w1080 {
+		font-size: rem(20px);
+	}
+
+	@include w768 {
+		margin: rem(50px) auto 0;
+		font-size: rem(18px);
+
+		&:before {
+			top: -30px;
+			width: rem(100px);
+		}
+	}
+}

@@ -1,0 +1,80 @@
+.checkbox {
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.checkbox-label {
+	position: relative;
+	@include inline-block(middle);
+	cursor: pointer;
+}
+
+.checkbox-label__input {
+	position: absolute;
+	top: 0;
+	left: -40px;
+}
+
+.checkbox-label__fake {
+	position: relative;
+	@include inline-block(middle);
+	width: 20px;
+	height: 20px;
+	margin-right: 20px;
+	border: 1px solid #c0c1c3;
+	cursor: pointer;
+
+	&:after {
+		display: none;
+		content: "";
+		position: absolute;
+		top: 5px;
+		left: 4px;
+		width:11px;
+		height: 9px;
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJCAMAAADTuiYfAAAAY1BMVEUSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcR8SQomAAAAIHRSTlMAAQMGCiQtOkJIVlpmaXZ4iZaZpqmutrfFx+rw9fn8/ocVUb0AAABISURBVHgBNcZXEoAgEATREXTNOYvg3P+UloX7frqh0k107c7jX7PwyiCrBZKJToCTs8HAOwcgjmNPX+JTeDJUiOrwNFBtF/sCtdADfs3ijrIAAAAASUVORK5CYII=)no-repeat;
+	}
+
+	&.warning {
+		border: 2px solid red;
+	}
+}
+
+.checkbox-label__text {
+	@include inline-block(middle);
+	font-size: rem(15px);
+	color: $black;
+}
+
+.checkbox__link {
+	position: relative;
+	@include inline-block(middle);
+	margin-left: 4px;
+	font-size: rem(15px);
+	color: $black;
+
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background-color: $black;
+		@include transition(.5s);
+	}
+
+	&:hover {
+
+		&:after {
+			background-color: transparent;
+		}
+	}
+}
+
+.checkbox-label__input:checked + .checkbox-label__fake {
+	
+	&:after {
+	    display: block;
+	}
+}

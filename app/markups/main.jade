@@ -1,0 +1,17 @@
+doctype html
+
+html
+    head(lang="ru")
+        include _nik/__head.jade
+        title
+            block title
+
+    body
+        .wrapper
+            .maincontent
+                block content
+         
+                include _common/_popup-quest
+                include _common/_popup-thanks
+        include _common/_footer
+        include _nik/__footer

@@ -1,0 +1,73 @@
+.i-workers {
+
+}
+
+.i-workers-owl {
+	margin: 0 auto 110px;
+}
+
+.i-worker-list {
+	margin: 0 rem(-43px);
+	font-size: 0;
+
+	@include w1224 {
+		margin: 0 rem(-30px);
+	}
+}
+
+.i-worker-item {
+	@include inline-block(top);
+	width: 100%;
+	padding: 0 rem(43px);
+	font-size: 16px;
+
+	// @include w1224 {
+	// 	padding: 0 rem(30px);
+	// }
+
+	// @include w992 {
+	// 	width: 50%;
+	// }
+}
+
+.i-worker-owl-item-link {
+	display: block;
+}
+
+.i-worker-owl-item-img {
+	position: relative;
+	height: rem(295px);
+	overflow: hidden;
+}
+
+.i-worker-owl-item-img__pic {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+	height: 100%;
+}
+
+.i-worker-owl-item-content {
+	padding: rem(23px) 0 rem(20px) 0;
+	text-align: center;
+}
+
+.i-worker-owl-item-content__title {
+	margin-bottom: rem(14px);
+	font-family: 'Museo Sans Cyrl 100';
+	font-size: rem(24px);
+	color: $black;
+}
+
+.i-worker-owl-item-content__post {
+	margin-bottom: rem(16px);
+	font-size: rem(15px);
+	color: $blue;
+}
+
+.i-worker-owl-item-content__desc {
+	line-height: 1.6;
+	font-size: rem(15px);
+	color: $black;
+}

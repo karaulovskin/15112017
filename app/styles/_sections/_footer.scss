@@ -1,0 +1,206 @@
+.footer {
+    padding-top: rem(45px);
+	background-color: #1f1f22;
+}
+
+.footer-copyright {
+	float: left;
+	width: 39.9%;
+
+	@include w992 {
+		width: 56%;
+	}
+
+	@include w800 {
+		width: 64%;
+	}
+
+	@include w600 {
+		width: 55%;
+	}
+}
+
+.footer-copyright-logo-link {
+	display: block;
+	width: rem(300px);
+
+	@include w600 {
+		width: rem(250px);
+	}
+}
+
+.footer-copyright-logo-link__img {
+	max-width: 100%;
+}
+
+.footer-copyright__desc {
+    margin-top: rem(16px);
+    font-size: rem(16px);
+	color: $grey;
+
+	@include w992 {
+		margin-top: rem(8px);
+	}
+
+	@include w890 {
+		margin-top: rem(4px);
+	}
+}
+
+.footer-contacts {
+	float: left;
+	width: 30%;
+	padding: 0 rem(80px) 0 rem(15px);
+
+	@include w1224 {
+		padding: 0 rem(50px) 0 rem(15px);
+	}
+
+	@include w992 {
+		width: 100%;
+		padding: rem(35px) 0 0 0;
+	}
+
+	@include w890 {
+	}
+}
+
+.footer-contacts__point {
+	margin-bottom: rem(14px);
+    line-height: 1.6;
+    font-size: rem(16px);
+	color: #fff;
+	@extend %clearfix;
+
+	@include w992 {
+		float: left;
+		width: 56%;
+	}
+
+	@include w890 {
+		padding-right: 25%;
+	}
+
+	@include w800 {
+		width: 64%;
+	}
+
+	@include w600 {
+		width: 55%;
+		padding-right: 10%;
+	}
+}
+
+.footer-contacts-phone {
+	margin-bottom: rem(16px);
+
+	@include w992 {
+		float: left;
+		width: 20%;
+	}
+
+	@include w890 {
+		width: 44%;
+		margin-bottom: rem(8px);
+	}
+
+	@include w800 {
+		width: 36%;
+	}
+
+	@include w600 {
+		width: 45%;
+	}
+}
+
+.footer-contacts-phone__text {
+	font-size: rem(16px);
+	color: #fff;
+
+	@include w1080 {
+		display: none;
+	}
+}
+
+.footer-contacts-phone__link {
+	display: none;
+	font-size: rem(16px);
+	color: #fff;
+
+	@include w1080 {
+		display: inline-block;
+	}
+}
+
+.footer-contacts-mail {
+
+	@include w992 {
+		float: left;
+		width: 20%;
+	}
+
+	@include w890 {
+		width: 44%;
+	}
+
+	@include w800 {
+		width: 36%;
+	}
+
+	@include w600 {
+		width: 45%;
+	}
+}
+
+.footer-contacts-mail__link {
+	display: inline-block;
+	font-size: rem(16px);
+	color: #fff;
+	border-bottom: 1px solid #fff;
+	@include transition(.3s);
+
+	&:hover {
+		border-color: transparent;
+	}
+}
+
+.footer-dev {
+	float: left;
+	width: 30%;
+	padding: 0 rem(30px);
+
+	@include w992 {
+		width: 44%;
+		padding: 0;
+	}
+
+	@include w800 {
+		width: 36%;
+	}
+
+	@include w600 {
+		width: 45%;
+	}
+}
+
+.footer-dev-link {
+	display: inline-block;
+	font-size: rem(16px);
+	color: $grey;
+	opacity: .5;
+	@include transition(.3s);
+
+	&:hover {
+		opacity: 1;
+
+		.footer-dev-link__value {
+			border-color: transparent;
+		}
+	}
+}
+
+.footer-dev-link__value {
+    margin-top: rem(12px);
+	border-bottom: 1px solid $grey;
+	@include transition(.3s);
+}

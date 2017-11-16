@@ -1,0 +1,40 @@
+.contacts
+	.contacts-head.inner-head
+		h1.contacts-head__title.inner-head__title Контакты
+	.contacts-body
+		.contacts-body-address
+			ul.contacts-body-address-list
+				li.contacts-body-address-item.contacts-body-address-item--point
+					.contacts-body-address-item__title Адрес офиса:
+					.contacts-body-address-item-desc
+						.contacts-body-address-item-desc__text Бизнес-центр «LIGHTHOUSE», 115054, Россия, Москва, Валовая улица, д. 26 (12 этаж) 
+				li.contacts-body-address-item.contacts-body-address-item--phone
+					.contacts-body-address-item__title Телефон:
+					.contacts-body-address-item-desc
+						.contacts-body-address-item-desc__text +7 495 788 5575
+						a.contacts-body-address-item-desc__link(href="tel:+74957885575") +7 495 788 5575
+				li.contacts-body-address-item.contacts-body-address-item--mail
+					.contacts-body-address-item__title Электронная почта:
+					.contacts-body-address-item-desc
+						.contacts-body-address-item-desc__text info@city-developer.ru
+						a.contacts-body-address-item-desc__link(href="mailto:info@city-developer.ru") info@city-developer.ru
+		.contacts-map
+			.map(id="map")
+			.contacts-callback(id="contacts-callback")
+				.contacts-callback-head
+					h1.contacts-callback__title Свяжитесь с нами
+				.contacts-callback-body
+					form.contacts-callback-form
+						.contacts-callback-form-label.label
+							input.contacts-callback-form-label__input.input(type="text" placeholder="Имя:" data-req="req")
+						.contacts-callback-form-label.label
+							input.contacts-callback-form-label__input.input(type="text" placeholder="Телефон:" data-req="req")
+						.contacts-callback-form-label.label
+							input.contacts-callback-form-label__input.input(type="text" placeholder="E-mail:" data-req="req")
+						.contacts-callback-form-label.label
+							textarea.contacts-callback-form-label__textarea.textarea(type="text" placeholder="Сообщение:" data-req="req")
+						.contacts-callback-form-btns
+							.contacts-callback-form-checkbox
+								include _checkbox
+							input.contacts-callback-form-btn.btn-blue(type="submit" value="Отправить")
+						.contacts-callback-form-warning Некоторые поля не заполнены или заполнены с ошибкой!

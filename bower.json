@@ -1,0 +1,7 @@
+{
+  "name": "site",
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "jquery.maskedinput": "^1.4.1"
+  }
+}

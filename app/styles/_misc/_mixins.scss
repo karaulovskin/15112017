@@ -1,0 +1,248 @@
+/* --------- mixins --------- */
+
+%clearfix {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin inlineblock ($valine: top) {
+	display: inline-block;
+	vertical-align: $valine;
+}
+
+@mixin border-radius($radius: 5px) {
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin columns($string...) {
+	-webkit-columns: $string;
+	columns: $string;
+}
+
+@mixin box-shadow($string...) {
+	-webkit-box-shadow: $string;
+	box-shadow: $string;
+}
+
+@mixin transition($transition...) {
+	-webkit-transition: $transition;
+	transition: $transition;
+}
+
+@mixin transform($transform...) {
+	-webkit-transform: $transform;
+	transform: $transform;
+}
+
+// @mixin placecolor($color: #000000) {
+// 	&::-webkit-input-placeholder {
+// 		color: $color;
+// 	}
+// 	&:-moz-placeholder {
+// 		color: $color;
+// 	}
+// 	&::-moz-placeholder {
+// 		color: $color;
+// 	}
+// 	&:-ms-input-placeholder {
+// 		color: $color;
+// 	}
+// }
+
+// @mixin vertical-gradient($top-color: #ffffff, $bottom-color: #000000) {
+// 	background-color: $top-color;
+// 	background-image: -webkit-gradient(linear, left top, left bottom, from($top-color), to($bottom-color)); /* Chrome, Safari 4+ */
+// 	background-image: -webkit-linear-gradient(top, $top-color, $bottom-color); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+// 	background-image: -moz-linear-gradient(top, $top-color, $bottom-color); /* Firefox 3.6-15 */
+// 	background-image: -o-linear-gradient(top, $top-color, $bottom-color); /* Opera 11.10-12.00 */
+// 	background-image: linear-gradient(to bottom, $top-color, $bottom-color); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+// 	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=$top-color, EndColorStr=$bottom-color);
+// }
+
+
+/* --------- centered --------- */
+
+@mixin absolute-center {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+/* --------- compass sprites --------- */
+
+// @mixin get-sprite($map, $sprite, $repeat: no-repeat, $height: true, $width: true) {
+// 	$sprite-image: sprite-file($map, $sprite);
+// 	$sprite-map: sprite-url($map);
+// 	$sprite-position: sprite-position($map, $sprite);
+// 	$sprite-layout: smart;
+
+// 	background: $sprite-map $sprite-position $repeat;
+
+// 	@if ($height == true) {
+// 		$sprite-height: image-height($sprite-image);
+// 		height: $sprite-height;
+// 	}
+
+// 	@if ($width == true) {
+// 		$sprite-width: image-width($sprite-image);
+// 		width: $sprite-width;
+// 	}
+// }
+
+/* --------- responsive --------- */
+
+@function rem($px) {
+	@return $px / 16px + 0rem;
+}
+
+@mixin hd {
+	@media screen and (max-width: 1886px) {
+		@content;
+	}
+}
+
+@mixin hd-min {
+	@media screen and (max-width: 1600px) {
+		@content;
+	}
+}
+
+@mixin w1366 {
+	@media screen and (max-width: 1366px) {
+		@content;
+	}
+}
+
+@mixin w1310 {
+	@media screen and (max-width: 1310px) {
+		@content;
+	}
+}
+
+@mixin w1300 {
+	@media screen and (max-width: 1300px) {
+		@content;
+	}
+}
+
+@mixin w1280 {
+	@media screen and (max-width: 1280px) {
+		@content;
+	}
+}
+
+@mixin w1240 {
+	@media screen and (max-width: 1240px) {
+		@content;
+	}
+}
+
+@mixin w1224 {
+	@media screen and (max-width: 1224px) {
+		@content;
+	}
+}
+
+@mixin w1180 {
+	@media screen and (max-width: 1180px) {
+		@content;
+	}
+}
+
+@mixin w1170 {
+	@media screen and (max-width: 1170px) {
+		@content;
+	}
+}
+
+@mixin w1080 {
+	@media screen and (max-width: 1080px) {
+		@content;
+	}
+}
+
+@mixin w1024 {
+	@media screen and (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin w992 {
+	@media screen and (max-width: 992px) {
+		@content;
+	}
+}
+
+@mixin w970 {
+	@media screen and (max-width: 970px) {
+		@content;
+	}
+}
+
+@mixin w890 {
+	@media screen and (max-width: 890px) {
+		@content;
+	}
+}
+
+@mixin w850 {
+	@media screen and (max-width: 850px) {
+		@content;
+	}
+}
+
+@mixin w800 {
+	@media screen and (max-width: 800px) {
+		@content;
+	}
+}
+
+@mixin w776 {
+	@media screen and (max-width: 776px) {
+		@content;
+	}
+}
+
+@mixin w768 {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin w700 {
+	@media screen and (max-width: 700px) {
+		@content;
+	}
+}
+
+@mixin w680 {
+	@media screen and (max-width: 680px) {
+		@content;
+	}
+}
+
+@mixin w600 {
+	@media screen and (max-width: 600px) {
+		@content;
+	}
+}
+
+@mixin w550 {
+	@media screen and (max-width: 550px) {
+		@content;
+	}
+}
+
+
+

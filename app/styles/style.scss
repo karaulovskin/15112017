@@ -1,0 +1,74 @@
+/* -------------- common colors -------------- */
+
+$grey: #6b6b6b;
+$grey2: #8e8f91;
+$blue: #1281c4;
+$black-title: #242424;
+$black: #414141;
+$section-bg: #f2f2f2;
+$border: #dbdee0;
+
+
+/* -------- reset ---------*/
+
+@import "_nik/_reset";
+
+
+// @import "_nik/_fancy";
+@import "_nik/_owl"; 
+
+@import "_nik/_media";
+
+/* -------- compass ---------*/
+
+@import "compass";
+
+/* -------- fonts ---------*/
+
+@import "_misc/fonts";
+
+/* --------- mixins --------- */
+
+@import "_misc/mixins";
+
+/* --------- jquery-ui --------- */
+
+@import "_misc/jquery-ui";
+
+/* --------- mmenu --------- */
+
+@import "_misc/_mmenu.all";
+
+/* --------- slick --------- */
+
+@import "_misc/slick";
+
+/* --------- scrollbar --------- */
+
+@import "_misc/mCustomScrollbar";
+
+/* --------- _fancybox-3 --------- */
+
+@import "_misc/fancybox-3";
+
+/* --------- fotorama --------- */
+
+// @import "_misc/fotorama";
+
+/* --------- adjustment --------- */
+
+@import "_misc/adjustment";
+
+
+/* --------- burger --------- */
+
+@import "_misc/burger";
+
+
+/* -------------- misc icons sprite -------------- */
+
+// $misc-sprite: sprite-map('icons/_misc/*.png', $spacing: 70px);
+
+/* --------- sections --------- */
+
+@import "_sections/**/*";

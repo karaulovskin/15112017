@@ -1,0 +1,223 @@
+.content {
+	padding-right: 50px;
+
+	h1:not([class]) {
+		margin-bottom: rem(28px);
+		font-family: 'Museo Sans Cyrl 100';
+		font-size: rem(46px);
+		color: $black-title;
+	}
+
+	h2:not([class]) {
+	    margin: rem(35px) 0 rem(18px);
+		font-family: 'Museo Sans Cyrl 100';
+		font-size: rem(34px);
+		color: $black-title;
+	}
+
+	h3:not([class]) {
+		margin: rem(35px) 0 rem(18px);
+		font-family: 'Museo Sans Cyrl 100';
+		font-size: rem(30px);
+		color: $black-title;
+	}
+
+	h4:not([class]){
+		margin: rtm(35px) 0 rem(18px);
+		font-family: 'Museo Sans Cyrl 100';
+		font-size: rem(28px);
+		color: $black-title;
+	}
+
+	p:not([class]){
+		margin: rem(12px) 0;
+		line-height: 1.6;
+		font-size: rem(15px);
+	}
+
+	span:not([class]){
+		// margin: 20px 0;
+		line-height: 1.6;
+		font-size: rem(15px);
+	}
+
+	img:not([class]){
+		margin: rem(10px) 0 0 0;
+		max-width:100%;
+		height: rem(450px);
+
+		@include w680 {
+			height: 56vw;
+		}
+	}
+
+	img:not([class]) + p {
+		font-family: 'Museo Sans Cyrl 100';
+		color: #8e8f91;
+	}
+
+	// * + img:not([class]){
+	// 	margin-top:5px;
+	// }
+
+	ul:not([class]) {
+		margin: rem(18px) 0 rem(18px);
+		list-style: none;
+	}
+
+	// * + ul:not([class]){
+	// 	margin-top:0px;
+	// }
+
+	ul:not([class]) li {
+		position: relative;
+		margin-bottom: rem(14px);
+		padding-left: rem(26px);
+		line-height: 1.6;
+		font-size: rem(15px);
+		color: #2f2e2e;
+
+		p {
+			color: #2f2e2e;
+		}
+	}
+
+	ul:not([class]) li:before {
+		content: "";
+		position: absolute;
+		top: 7px;
+		left: 0;
+		width: rem(7px);
+		height: rem(10px);
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAKCAMAAABPErQ/AAAAGFBMVEUSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQhBbGOAAAAB3RSTlMAByUrtrfqHPvjEAAAACZJREFUCNdjYGBkZAABRhZWMIOJjR3CYEZnAGkWRjgFUwfTBzUHABixAJvsjr8dAAAAAElFTkSuQmCC) no-repeat;
+		background-size: contain;
+	}
+
+	ol:not([class]) {
+		list-style: none;
+		margin: rem(12px) 0 rem(15px);
+		counter-reset: myCounter;
+	}
+
+	// * + ol:not([class]){
+	// 	margin-top:-6px;
+	// }
+
+	ol:not([class]) li {
+		position: relative;
+		margin-bottom: rem(14px);
+		padding-left: rem(15px);
+		line-height: 1.6;
+		font-size: rem(15px);
+	}
+
+	// ol:not([class]) li + li {
+	// 	margin-top: 12px;
+	// }
+
+	ol:not([class]) li:before{
+		counter-increment: myCounter;
+		content:counter(myCounter)".";	
+		position: absolute;
+		top:0;
+		left:0;
+		font-size: rem(15px);
+		box-sizing: border-box;
+	}
+
+	table:not([class]) {
+		margin: rem(15px) 0 rem(20px);
+		table-layout: fixed;
+	}
+
+	table:not([class]) thead td {
+		padding: rem(14px) rem(26px);
+	}
+
+	table:not([class]) tr {
+		text-align: left;
+		border-bottom: 1px solid #dbdee0;
+	}
+
+	table:not([class]) tr:first-child {
+		border-top: 1px solid #dbdee0;
+	}
+
+	table:not([class]) tr td:first-child {
+		color: #9fa1a4;
+	}
+
+	table:not([class]) th {
+		padding: rem(14px) rem(26px);
+	}
+
+	table:not([class]) td {
+		padding: rem(14px) rem(26px);
+	    vertical-align: middle;
+		font-size: rem(15px);
+	}
+
+	a:not([class]) {
+		font-size: rem(15px);
+		color: $blue;
+		border-bottom: 1px solid $blue;
+	    -webkit-transition: 0.3s;
+    	transition: 0.3s;
+
+		&:hover{
+			border-color:transparent;
+		}
+	}
+	*:not([class]):not(span):first-child {
+		margin-top: 0 !important;
+	}
+	*:not([class]):not(span):last-child {
+		margin-bottom: 0 !important;
+	}
+}
+
+.animator{
+	position: relative;
+	&:not(.visible)[data-direction="rtl"] {
+		right: -100px;
+		opacity: 0;
+	}
+	&:not(.visible)[data-direction="ltr"] {
+		left: -100px;
+		opacity: 0;
+	}
+	&:not(.visible)[data-direction="ttb"] {
+		top: -100px;
+		opacity: 0;
+	}
+	&:not(.visible)[data-direction="btt"] {
+		bottom: -100px;
+		opacity: 0;
+	}
+	&:not(.visible)[data-direction="fi"] {
+		opacity: 0;
+	}
+}
+
+input.warning,
+textarea.warning{
+	border-color: #ff3a00;
+}
+
+.hidden-block{
+	display: none;
+}
+
+@media screen and (max-width: 1224px) {
+
+	.content {
+		padding-right: 0;
+	}
+}
+
+@media screen and (max-width: 900px) {
+
+	table:not([class]) {
+		max-width: 100%!important;
+	}
+}

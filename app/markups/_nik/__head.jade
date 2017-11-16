@@ -1,0 +1,18 @@
+meta(charset="utf-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="format-detection", content="telephone=no")
+meta(name="cmsmagazine", content="6a5de8b480a9f417d465ec3935efb0fd")
+meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+meta(name="description", content="")
+meta(name="keywords", content="")
+
+link(rel="shortcut icon" type="image/x-icon" href="favicon.ico")
+link(rel="stylesheet", href="static/css/style.css")
+
+script(type="text/javascript", src="static/js/ext/jquery-3.1.1.min.js")
+script(type="text/javascript", src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+script(type="text/javascript").
+	if ($(window).width() <= 480) {
+		$('meta[name="viewport"]').attr('content', 'width=480');
+	}

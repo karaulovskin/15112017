@@ -1,0 +1,18 @@
+.popup.popup-questions(id="popup-quest")
+	.popup-head
+		h1.popup-head__title Задайте вопрос
+	.popup-body
+		form.popup-form
+			.popup-form-label.label
+				input.popup-form-label__input.input(type="text" placeholder="Имя:" data-req="req")
+			.popup-form-label.label
+				input.popup-form-label__input.input(type="text" placeholder="Телефон:" data-req="req")
+			.popup-form-label.label
+				input.popup-form-label__input.input(type="text" placeholder="E-mail:" data-req="req")
+			.popup-form-label.label
+				textarea.popup-form-label__textarea.textarea(type="text" placeholder="Сообщение:" data-req="req")
+			.popup-form-btns
+				.popup-form-checkbox
+					include _checkbox
+				input.popup-form-btn.btn-blue.js-sendform(type="submit" value="Отправить")
+			.contacts-callback-form-warning Некоторые поля не заполнены или заполнены с ошибкой!

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+	<head lang="ru">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="cmsmagazine" content="6a5de8b480a9f417d465ec3935efb0fd">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link rel="stylesheet" href="static/css/style.css">
+		<script type="text/javascript" src="static/js/ext/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+		<script type="text/javascript">
+			if ($(window).width() <= 480) {
+				$('meta[name="viewport"]').attr('content', 'width=480');
+			}
+		</script>
+		<title>Контакты</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="maincontent">
+				<header class="header header--inner">
+					<div class="container">
+						<div class="header-logo"><a href="index.html" class="header-logo-link"><img src="./img/logo-header.png" alt="" class="header-logo-link__img"></a></div>
+						<div class="header-nav">
+							<ul class="header-nav-list">
+								<li class="header-nav-item active"><a href="projects.html" class="header-nav-item__link">Проекты</a></li>
+								<li class="header-nav-item"><a href="inside.html" class="header-nav-item__link">О компании</a></li>
+								<li class="header-nav-item"><a href="workers.html" class="header-nav-item__link">Сотрудники</a></li>
+								<li class="header-nav-item"><a href="questions.html" class="header-nav-item__link">Вопросы и ответы</a></li>
+								<li class="header-nav-item"><a href="contacts.html" class="header-nav-item__link">Контакты</a></li>
+							</ul>
+						</div><a href="#" class="header-burger"><span></span></a>
+						<div class="header-contacts">
+							<ul class="header-contacts-list">
+								<li class="header-contacts-item"><a href="tel:+74957885575" class="header-contacts-item__link">+7 (495) <span>788-55-75</span></a>
+									<div class="header-contacts-item__text">+7 (495) <span>788-55-75</span></div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</header>
+				<div class="inner">
+					<div class="container">
+						<ul class="breadcrumbs-list">
+							<li class="breadcrumbs-item"><a href="/" class="breadcrumbs-item__link">Главная</a></li>
+							<li class="breadcrumbs-item"><a href="#" class="breadcrumbs-item__link">Новости</a></li>
+						</ul>
+						<div class="contacts">
+							<div class="contacts-head inner-head">
+								<h1 class="contacts-head__title inner-head__title">Контакты</h1>
+							</div>
+							<div class="contacts-body">
+								<div class="contacts-body-address">
+									<ul class="contacts-body-address-list">
+										<li class="contacts-body-address-item contacts-body-address-item--point">
+											<div class="contacts-body-address-item__title">Адрес офиса:</div>
+											<div class="contacts-body-address-item-desc">
+												<div class="contacts-body-address-item-desc__text">Бизнес-центр «LIGHTHOUSE», 115054, Россия, Москва, Валовая улица, д. 26 (12 этаж) </div>
+											</div>
+										</li>
+										<li class="contacts-body-address-item contacts-body-address-item--phone">
+											<div class="contacts-body-address-item__title">Телефон:</div>
+											<div class="contacts-body-address-item-desc">
+												<div class="contacts-body-address-item-desc__text">+7 495 788 5575</div><a href="tel:+74957885575" class="contacts-body-address-item-desc__link">+7 495 788 5575</a>
+											</div>
+										</li>
+										<li class="contacts-body-address-item contacts-body-address-item--mail">
+											<div class="contacts-body-address-item__title">Электронная почта:</div>
+											<div class="contacts-body-address-item-desc">
+												<div class="contacts-body-address-item-desc__text">info@city-developer.ru</div><a href="mailto:info@city-developer.ru" class="contacts-body-address-item-desc__link">info@city-developer.ru</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="contacts-map">
+									<div id="map" class="map"></div>
+									<div id="contacts-callback" class="contacts-callback">
+										<div class="contacts-callback-head">
+											<h1 class="contacts-callback__title">Свяжитесь с нами</h1>
+										</div>
+										<div class="contacts-callback-body">
+											<form class="contacts-callback-form">
+												<div class="contacts-callback-form-label label">
+													<input type="text" placeholder="Имя:" data-req="req" class="contacts-callback-form-label__input input">
+												</div>
+												<div class="contacts-callback-form-label label">
+													<input type="text" placeholder="Телефон:" data-req="req" class="contacts-callback-form-label__input input">
+												</div>
+												<div class="contacts-callback-form-label label">
+													<input type="text" placeholder="E-mail:" data-req="req" class="contacts-callback-form-label__input input">
+												</div>
+												<div class="contacts-callback-form-label label">
+													<textarea type="text" placeholder="Сообщение:" data-req="req" class="contacts-callback-form-label__textarea textarea"></textarea>
+												</div>
+												<div class="contacts-callback-form-btns">
+													<div class="contacts-callback-form-checkbox">
+														<div class="checkbox">
+															<label class="checkbox-label">
+																<input type="checkbox" name="" data-type="checkbox" data-req="req" class="checkbox-label__input">
+																<div class="checkbox-label__fake"></div>
+																<div class="checkbox-label__text">Cогласен на обработку </div>
+															</label><a href="#" class="checkbox__link">персональных данных</a>
+														</div>
+													</div>
+													<input type="submit" value="Отправить" class="contacts-callback-form-btn btn-blue">
+												</div>
+												<div class="contacts-callback-form-warning">Некоторые поля не заполнены или заполнены с ошибкой!</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="popup-quest" class="popup popup-questions">
+					<div class="popup-head">
+						<h1 class="popup-head__title">Задайте вопрос</h1>
+					</div>
+					<div class="popup-body">
+						<form class="popup-form">
+							<div class="popup-form-label label">
+								<input type="text" placeholder="Имя:" data-req="req" class="popup-form-label__input input">
+							</div>
+							<div class="popup-form-label label">
+								<input type="text" placeholder="Телефон:" data-req="req" class="popup-form-label__input input">
+							</div>
+							<div class="popup-form-label label">
+								<input type="text" placeholder="E-mail:" data-req="req" class="popup-form-label__input input">
+							</div>
+							<div class="popup-form-label label">
+								<textarea type="text" placeholder="Сообщение:" data-req="req" class="popup-form-label__textarea textarea"></textarea>
+							</div>
+							<div class="popup-form-btns">
+								<div class="popup-form-checkbox">
+									<div class="checkbox">
+										<label class="checkbox-label">
+											<input type="checkbox" name="" data-type="checkbox" data-req="req" class="checkbox-label__input">
+											<div class="checkbox-label__fake"></div>
+											<div class="checkbox-label__text">Cогласен на обработку </div>
+										</label><a href="#" class="checkbox__link">персональных данных</a>
+									</div>
+								</div>
+								<input type="submit" value="Отправить" class="popup-form-btn btn-blue js-sendform">
+							</div>
+							<div class="contacts-callback-form-warning">Некоторые поля не заполнены или заполнены с ошибкой!</div>
+						</form>
+					</div>
+				</div>
+				<div id="popup-thanks" class="popup popup-thanks">
+					<div class="popup-head">
+						<div class="popup-head__title">Спасибо, что задали вопрос!</div>
+						<div class="popup-head__desc">Ответ поступит на указанную Вами электронную почту.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-copyright">
+					<div class="footer-copyright-logo"><a href="/" class="footer-copyright-logo-link"><img src="./img/logo-footer.png" alt="" class="footer-copyright-logo-link__img"></a></div>
+					<div class="footer-copyright__desc">City-Developer © 2016-2017</div>
+				</div>
+				<div class="footer-contacts">
+					<div class="footer-contacts__point">115054, Россия, Москва, Валовая улица, д. 26 (12 этаж)</div>
+					<div class="footer-contacts-phone">
+						<div class="footer-contacts-phone__text">+7 (495) 788-55-75</div><a href="tel:+74957885575" class="footer-contacts-phone__link">+7 (495) 788-55-75</a>
+					</div>
+					<div class="footer-contacts-mail"><a href="mailto:info@city-developer.ru" class="footer-contacts-mail__link">info@city-developer.ru</a></div>
+				</div>
+				<div class="footer-dev"><a href="#" class="footer-dev-link">
+						<div class="footer-dev-link__key">Разработка сайта:</div>
+						<div class="footer-dev-link__value">Интернет-агентство Dextra</div></a></div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="static/js/ext/jquery-migrate-3.0.0.js"></script>
+		<script type="text/javascript" src="static/js/ext/jquery.mask.min.js"></script>
+		<script type="text/javascript" src="static/js/ext/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="static/js/ext/jquery.dotdotdot.min.js"></script>
+		<script type="text/javascript" src="static/js/ext/jquery.fancybox-3.min.js"></script>
+		<script type="text/javascript" src="static/js/ext/fotorama.js"></script>
+		<script type="text/javascript" src="static/js/ext/jquery.formstyler.min.js"></script>
+		<script type="text/javascript" src="static/js/ext/owl.carousel.min.js"></script>
+		<script type="text/javascript" src="static/js/ext/jquery.mmenu.all.js"></script>
+		<script type="text/javascript" src="static/js/ext/jquery.mCustomScrollbar.concat.min.js"></script>
+		<script type="text/javascript" src="static/js/ext/slick.min.js"></script>
+		<script type="text/javascript" src="static/js/ext/masonry.pkgd.min.js"></script>
+		<script type="text/javascript" src="static/js/script.js"></script>
+	</body>
+</html>

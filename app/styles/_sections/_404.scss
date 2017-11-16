@@ -1,0 +1,142 @@
+.error {
+	text-align: center;
+}
+
+.error__title {
+	font-family: 'Museo Sans Cyrl 900';
+    line-height: 1;
+	font-size: rem(386px);
+	color: #fff;
+	@include text-shadow(2px 0 43px rgba(0, 0, 2, .13));
+
+	@include w992 {
+		font-size: rem(360px);
+	}
+
+	@include w768 {
+		font-size: rem(280px);
+	}
+}
+
+.error-content {
+	margin-bottom: rem(48px);
+}
+
+.error-content__title {
+    margin-bottom: 10px;
+    font-family: 'Museo Sans Cyrl 100';
+	font-size: rem(46px);
+}
+
+.error-content__desc {
+	font-size: rem(20px);
+
+	@include w768 {
+		font-size: rem(18px);
+	}
+
+	@include w600 {
+		font-size: rem(15px);
+	}
+}
+
+.error__link {
+	display: inline-block;
+	font-size: rem(20px);
+	color: $blue;
+	border-bottom: 1px solid $blue;
+	@include transition(.3s);
+
+	&:hover {
+		border-color: transparent;
+	}
+
+	@include w768 {
+		font-size: rem(18px);
+	}
+
+	@include w600 {
+		font-size: rem(15px);
+	}
+}
+
+.error-map {
+	width: 380px;
+	margin: auto;
+}
+
+.error-map__title {
+	margin-bottom: rem(20px);
+	font-family: 'Museo Sans Cyrl 100';
+	font-size: rem(34px);
+	color: $blue;
+}
+
+.error-map-list {
+	text-align: left;
+}
+
+.error-map-item {
+	position: relative;
+	margin-bottom: rem(20px);
+	padding-left: rem(27px);
+	
+	&:before {
+		content: "";
+		position: absolute;
+		top: 4px;
+		left: 0;
+		width: 7px;
+		height: 10px;
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAKCAMAAABPErQ/AAAAGFBMVEUSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQhBbGOAAAAB3RSTlMAByUrtrfqHPvjEAAAACZJREFUCNdjYGBkZAABRhZWMIOJjR3CYEZnAGkWRjgFUwfTBzUHABixAJvsjr8dAAAAAElFTkSuQmCC) no-repeat;
+	}
+
+	@include w992 {
+		margin-bottom: rem(16px);
+	}
+
+	@include w768 {
+		margin-bottom: rem(12px);
+	}
+}
+
+.error-map-item__link {
+	display: inline-block;
+	font-size: rem(15px);
+	color: $black;
+	border-bottom: 1px solid transparent;
+	@include transition(.3s);
+
+	&:hover {
+		border-color: $black;
+	}
+}
+
+.error-map-dropdown-list {
+	margin: rem(20px) 0 0 rem(22px);
+}
+
+.error-map-dropdown-item {
+	margin-bottom: rem(20px);
+
+	@include w992 {
+		margin-bottom: rem(16px);
+	}
+
+	@include w768 {
+		margin-bottom: rem(12px);
+	}
+}
+
+.error-map-dropdown-item__link {
+	display: inline-block;
+	font-size: rem(15px);
+	color: #8f9092;
+
+	border-bottom: 1px solid transparent;
+	@include transition(.3s);
+
+	&:hover {
+		border-color: #8f9092;
+	}
+}

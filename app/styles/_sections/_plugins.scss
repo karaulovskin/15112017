@@ -1,0 +1,196 @@
+/*---------- owl ---------- */
+
+.owl-controls {
+	position: absolute;
+	left: 50%;
+	bottom: -92px;
+	@include transform(translateX(-50%));
+}
+
+.owl-nav {
+	position: relative;
+	font-size: 0;
+	@extend %clearfix;
+}
+
+.owl-prev,
+.owl-next {
+	position: absolute;
+	top: -4px;
+	width: 15px;
+	height: 28px;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAcCAMAAACJShVNAAAAjVBMVEUSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcTUJXXKAAAALnRSTlMAAwQFBgcICgsMDQ4PeJiapaeoqaqrrK2vsLGztba3ury+wMHCw8TFxsjK8/T2NUc1lgAAAItJREFUeAFl0WcSglAMBGCwiL08ey9i19z/eO6MuPuG8O/LMLDZJNHTCK9exPrO7CPWtmYWxA24z8gVeBAX4FGcgyeyOgNzsjIFL60/0wl4bZMBvHXIIXjvMkcffIjJ2+wpeg9K76cjfq8YjPl75mE85c2b9G+fc0ZrXw6W7KMYrNmX79P17e7Be30Ba0oVEUz7RTIAAAAASUVORK5CYII=)no-repeat;
+	opacity: .75;
+	@include transition(.3s);
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&.disabled {
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAcCAMAAACJShVNAAAAb1BMVEW+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMKE3NREAAAAJXRSTlMAAwQFBgcICQoLWVxzdXx+f4CBgoOFhoiJjY6PkJGSk5S2t7m/vMqalgAAAHFJREFUeNpl0UcSwCAIBVDTe+89Jt7/jCFZgAZ274+jAkIrJ5exRntQ6jKpamIPnD1kB1xMrsQWuBGbl77JAFkDd6RVAY8QWQJPpEhNihsYobgzOs+v58/z3/KA2uPt82nxgMY7/YNSX8/47YPKLWTyAImWEKJ9JWSYAAAAAElFTkSuQmCC)no-repeat;
+	    cursor: default!important;
+	}
+}
+
+.owl-prev {
+	left: -44px;
+}
+
+.owl-next {
+	right: -44px;
+	@include transform(rotate(180deg));
+}
+
+.owl-dots {
+	text-align: center;
+	white-space: nowrap;
+}
+
+.owl-dot {
+	@include inline-block(middle);
+	width: 10px;
+	height: 10px;
+	margin-left: 20px;
+	background-color: #bec0c2;
+	@include border-radius(50%);
+	@include transition(.3s);
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	&.active,
+	&:hover {
+		background-color: $blue;
+	}
+}
+
+
+/*---------- slick ---------- */
+
+.slick-arrow {
+	position: absolute;
+	top: 50%;
+	@include transform(translate(-50%, -50%));
+	width: 12px;
+	height: 22px;
+	font-size: 0;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAMAAADD5o0oAAAAnFBMVEW+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wMK+wML4vYTzAAAAM3RSTlMAOz0+QEFDREZHSElKS05PUFFUVVdYWltdX2FiY2RmaKOo6e7v8PHy8/T19vf4+fv8/f4bbh6TAAAAfklEQVR4AT3OVxLCMAyEYUPoPYTeiykYUIT3/ndjPKOsn77/xVrHN7qc6FzgK08FMjEXJWRsnitkaF4qvn3zSvHumjeK0DFvfwgt8y4iNMzO45nx8g33GuMQ8aizjhGvjLWPCM0Eft5mrXnWBn16rEWaypopZMAqSlwZLvfnP7jVDdjubYe/AAAAAElFTkSuQmCC)no-repeat;	
+	border: none;
+	cursor: pointer;
+	outline: none;
+	@include transition(.3s);
+
+	&:hover {
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAMAAADD5o0oAAAAnFBMVEX///8SgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQSgcQ7HNWRAAAAM3RSTlMAOz0+QEFDREZHSElKS05PUFFUVVdYWltdX2FiY2RmaKOo6e7v8PHy8/T19vf4+fv8/f4bbh6TAAAAfklEQVR4AT3OVxLCMAyEYUPoPYTeiykYUIT3/ndjPKOsn77/xVrHN7qc6FzgK08FMjEXJWRsnitkaF4qvn3zSvHumjeK0DFvfwgt8y4iNMzO45nx8g33GuMQ8aizjhGvjLWPCM0Eft5mrXnWBn16rEWaypopZMAqSlwZLvfnP7jVDdjubYe/AAAAAElFTkSuQmCC)no-repeat;
+	}
+}
+
+.slick-prev {
+	left: -20px;
+}
+
+.slick-next {
+	right: -30px;
+	@include transform(translate(-50%, -50%) rotate(180deg));
+}
+
+
+/*---------- mCustomScroll ---------- */
+
+.mCSB_scrollTools {
+	width: 12px;
+	border-left: 1px solid $border;
+
+	.mCSB_draggerContainer {
+		margin: 3px 0;
+		background-color: #fff;
+	}
+
+	.mCSB_dragger {
+
+		.mCSB_dragger_bar {
+			width: 5px;
+			background-color: $border!important;
+		}
+	}
+
+	.mCSB_draggerRail {
+		background-color: transparent;
+	}
+}
+
+.mCustomScrollbar {
+	background-color: #fff;
+}
+
+
+/*---------- fancybox ---------- */
+
+.fancybox-image-wrap {
+	left: -2px!important;
+}
+
+.fancybox-show-thumbs .fancybox-inner {
+	right: 0;
+}
+
+.fancybox-toolbar {
+	top: 10px;
+	right: 10px;
+}
+
+.fancybox-thumbs {
+	top: auto;
+	left: 0;
+	width: auto;
+	height: 100px;
+	// background-color: rgba(30, 30, 30, .5);
+	background-color: transparent;
+}
+
+.slick .fancybox-thumbs {
+	top: 50%;
+	bottom: auto;
+	@include transform(translateY(-50%));
+	margin-top: 325px;
+
+	ul {
+		width: 700px;
+		margin: auto;
+	}
+
+	li {
+		position: relative;
+		height: 90px;
+		margin: 0 10px;
+	}
+
+	img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include transform(translate(-50%, -50%));
+		width: 100%!important;
+		margin-left: 0!important;
+		margin-top: 0!important;
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border: 2px solid transparent;
+		}
+
+		&.fancybox-thumbs-active {
+
+			&:after {
+				border-color: $blue;
+			}
+		}
+	}
+}

@@ -1,0 +1,58 @@
+.popup {
+	display: none;
+	padding: rem(50px);
+	background-color: #fff;
+}
+
+.popup-questions {
+	width: rem(700px);
+
+	@include w680 {
+		width: 90%;
+	}
+}
+
+.popup-thanks {
+	width: rem(580px);
+	padding: rem(80px) 0 rem(70px);
+	text-align: center;
+
+	@include w680 {
+		width: 90%;
+	}
+}
+
+.popup-head {
+	margin-bottom: rem(18px);
+}
+
+.popup-head__title {
+	font-family: 'Museo Sans Cyrl 100';
+	font-size: rem(30px);
+	color: $black-title;
+}
+
+.popup-head__desc {
+	margin-top: rem(26px);
+}
+
+.popup-form-btns {
+	@include inline-block(middle);
+	margin-top: rem(15px);
+}
+
+.popup-form-checkbox {
+	float: right;
+	@include inline-block(middle);
+	position: relative;
+	margin-top: rem(10px);
+	margin-left: rem(34px);
+	text-align: left;
+
+	@include w680 {
+		float: none;
+		display: block;
+		margin-left: 0;
+		margin-bottom: rem(20px);
+	}
+}
